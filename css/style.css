@@ -19,3 +19,9 @@ span.roast {
 span.d-inline-block.mx-2.name{
     font-size: 30px;
 }
+
+#rouge-font {
+    font-family: 'Rouge Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
