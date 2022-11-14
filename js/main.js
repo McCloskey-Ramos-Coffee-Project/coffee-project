@@ -83,5 +83,3 @@ submitButton.addEventListener('click', updateCoffees);
 searchText.addEventListener('keyup', updateSearchCoffees)
 document.getElementById("roast-selection").addEventListener('change', updateCoffees)
 document.getElementById("addSubmit").addEventListener('click', addCoffee);
-document.getElementById("coffees").onload('coffees');
-
