@@ -12,7 +12,6 @@
         var html = '';
         for (var i = 0; i <= coffees.length - 1; i++) {
             html += renderCoffee(coffees[i]);
-            // localStorage.getItem(JSON.parse(coffees));
         }
         return html;
     }
@@ -47,45 +46,34 @@
         e.preventDefault();
         var roast = document.getElementById("roast2").value;
         var coffeeName = document.getElementById("roast-name").value;
-        // let saveCoffee = roast + " " + coffeeName;
         var id = coffees[coffees.length - 1].id + 1;
         coffees.push({id: id, name: coffeeName, roast: roast})
         localStorage.setItem("coffees", JSON.stringify(coffees));
         updateCoffees(e);
     }
 
-    function renderCoffees2() {
-        let coffees2 = JSON.parse(id);
-        if (coffees2 === coffees) {
-            return renderCoffees(coffees);
-        } else {
-            return tbody.innerHTML = renderCoffees2(renderCoffees(id));
-        }
-    }
-
-
     var coffees;
 
-if (localStorage.getItem("coffees") === null) {
-    coffees = [
-        {id: 1, name: 'Light City', roast: 'light'},
-        {id: 2, name: 'Half City', roast: 'light'},
-        {id: 3, name: 'Cinnamon', roast: 'light'},
-        {id: 4, name: 'City', roast: 'medium'},
-        {id: 5, name: 'American', roast: 'medium'},
-        {id: 6, name: 'Breakfast', roast: 'medium'},
-        {id: 7, name: 'High', roast: 'dark'},
-        {id: 8, name: 'Continental', roast: 'dark'},
-        {id: 9, name: 'New Orleans', roast: 'dark'},
-        {id: 10, name: 'European', roast: 'dark'},
-        {id: 11, name: 'Espresso', roast: 'dark'},
-        {id: 12, name: 'Viennese', roast: 'dark'},
-        {id: 13, name: 'Italian', roast: 'dark'},
-        {id: 14, name: 'French', roast: 'dark'},
-    ];
-} else {
-    coffees = JSON.parse(localStorage.getItem("coffees"));
-}
+    if (localStorage.getItem("coffees") === null) {
+        coffees = [
+            {id: 1, name: 'Light City', roast: 'light'},
+            {id: 2, name: 'Half City', roast: 'light'},
+            {id: 3, name: 'Cinnamon', roast: 'light'},
+            {id: 4, name: 'City', roast: 'medium'},
+            {id: 5, name: 'American', roast: 'medium'},
+            {id: 6, name: 'Breakfast', roast: 'medium'},
+            {id: 7, name: 'High', roast: 'dark'},
+            {id: 8, name: 'Continental', roast: 'dark'},
+            {id: 9, name: 'New Orleans', roast: 'dark'},
+            {id: 10, name: 'European', roast: 'dark'},
+            {id: 11, name: 'Espresso', roast: 'dark'},
+            {id: 12, name: 'Viennese', roast: 'dark'},
+            {id: 13, name: 'Italian', roast: 'dark'},
+            {id: 14, name: 'French', roast: 'dark'},
+        ];
+    } else {
+        coffees = JSON.parse(localStorage.getItem("coffees"));
+    }
 
     var tbody = document.querySelector('#coffees');
     var submitButton = document.querySelector('#submit');
@@ -99,5 +87,3 @@ if (localStorage.getItem("coffees") === null) {
     document.getElementById("addSubmit").addEventListener('click', addCoffee);
 
 })();
-
-
