@@ -1,10 +1,10 @@
 "use strict";
+
 (function () {
     function renderCoffee(coffee) {
         var html = '<div class="col-6 m-0 coffee">';
         html += '<div >' + '<span class="d-inline-block mx-2 name">' + coffee.name + '</span>' + ' ' + '<span class="roast">' + coffee.roast + '</span>' + '</div>';
         html += '</div>';
-
         return html;
     }
 
@@ -12,6 +12,7 @@
         var html = '';
         for (var i = 0; i <= coffees.length - 1; i++) {
             html += renderCoffee(coffees[i]);
+            // localStorage.getItem(JSON.parse(coffees));
         }
         return html;
     }
@@ -46,13 +47,27 @@
         e.preventDefault();
         var roast = document.getElementById("roast2").value;
         var coffeeName = document.getElementById("roast-name").value;
+        // let saveCoffee = roast + " " + coffeeName;
         var id = coffees[coffees.length - 1].id + 1;
-        // var userCoffee = localStorage.setItem('coffeeName', JSON.stringify(coffeeName));
         coffees.push({id: id, name: coffeeName, roast: roast})
+        localStorage.setItem("coffees", JSON.stringify(coffees));
         updateCoffees(e);
     }
 
-    var coffees = [
+    function renderCoffees2() {
+        let coffees2 = JSON.parse(id);
+        if (coffees2 === coffees) {
+            return renderCoffees(coffees);
+        } else {
+            return tbody.innerHTML = renderCoffees2(renderCoffees(id));
+        }
+    }
+
+
+    var coffees;
+
+if (localStorage.getItem("coffees") === null) {
+    coffees = [
         {id: 1, name: 'Light City', roast: 'light'},
         {id: 2, name: 'Half City', roast: 'light'},
         {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -68,6 +83,9 @@
         {id: 13, name: 'Italian', roast: 'dark'},
         {id: 14, name: 'French', roast: 'dark'},
     ];
+} else {
+    coffees = JSON.parse(localStorage.getItem("coffees"));
+}
 
     var tbody = document.querySelector('#coffees');
     var submitButton = document.querySelector('#submit');
@@ -79,8 +97,6 @@
     searchText.addEventListener('keyup', updateSearchCoffees)
     document.getElementById("roast-selection").addEventListener('change', updateCoffees)
     document.getElementById("addSubmit").addEventListener('click', addCoffee);
-    localStorage.getItem('updateCoffees');
-    localStorage.setItem('addCoffee', 'coffee');
 
 })();
 
