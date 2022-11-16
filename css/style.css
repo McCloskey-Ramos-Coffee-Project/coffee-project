@@ -12,6 +12,7 @@ table {
     padding: 10px;
     list-style: none;
     font-weight: bold;
+    font-size: 30px;
 }
 
 nav>img {
@@ -25,12 +26,9 @@ nav>img {
     top: 10px;
     font-family: 'Pacifico', cursive;
     font-weight: bold;
+}
 
-}
-#roast{
-    font-family: "Pacifico", cursive;
-    font-weight: bold;
-}
+
 #coffees{
     font-family: "Pacifico",cursive;
     font-weight: bold;
@@ -48,5 +46,9 @@ span.d-inline-block.mx-2.name{
 #rouge-font {
     font-family: 'Pacifico', cursive;
     font-size: 30px;
+    font-weight: bold;
+}
+.pacifico {
+    font-family: 'Pacifico', cursive;
     font-weight: bold;
 }
