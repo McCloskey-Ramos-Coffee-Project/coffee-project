@@ -2,7 +2,7 @@
 
 (function () {
     function renderCoffee(coffee) {
-        var html = '<div class="col-6 m-0 coffee">';
+        var html = '<div class="col coffee">';
         html += '<div >' + '<span class="d-inline-block mx-2 name">' + coffee.name + '</span>' + ' ' + '<span class="roast">' + coffee.roast + '</span>' + '</div>';
         html += '</div>';
         return html;

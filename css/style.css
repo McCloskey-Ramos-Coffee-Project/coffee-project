@@ -3,21 +3,14 @@ table {
     margin: 15px 0;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 .navbar {
-    background-image: url("/img/coffee-menu.jpeg");
-    border: black 2px solid;
+    background-image: url("/img/just-beans.jpeg");
 }
 
 .nav-link-active {
-    margin: 0;
-    padding: 0;
+    margin: 15px;
+    padding: 10px;
     list-style: none;
-    color: khaki;
     font-weight: bold;
 }
 
@@ -30,17 +23,18 @@ nav>img {
 #roast-heading {
     position: relative;
     top: 10px;
-    font-family: 'Rouge Script', cursive;
+    font-family: 'Pacifico', cursive;
     font-weight: bold;
 
 }
 #roast{
-    font-family: "Rouge Script", cursive;
+    font-family: "Pacifico", cursive;
     font-weight: bold;
 }
 #coffees{
-    font-family: "Rouge Script",cursive;
+    font-family: "Pacifico",cursive;
     font-weight: bold;
+    display: inline;
 }
 
 span.roast {
@@ -52,7 +46,7 @@ span.d-inline-block.mx-2.name{
 }
 
 #rouge-font {
-    font-family: 'Rouge Script', cursive;
+    font-family: 'Pacifico', cursive;
     font-size: 30px;
     font-weight: bold;
 }
