@@ -30,6 +30,17 @@ nav>img {
 #roast-heading {
     position: relative;
     top: 10px;
+    font-family: 'Rouge Script', cursive;
+    font-weight: bold;
+
+}
+#roast{
+    font-family: "Rouge Script", cursive;
+    font-weight: bold;
+}
+#coffees{
+    font-family: "Rouge Script",cursive;
+    font-weight: bold;
 }
 
 span.roast {
