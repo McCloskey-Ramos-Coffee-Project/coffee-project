@@ -39,6 +39,7 @@ span.roast {
     color: gray;
     font-size: 19px;
 }
+
 span.d-inline-block.mx-2.name{
     font-size: 30px;
 }
@@ -48,6 +49,7 @@ span.d-inline-block.mx-2.name{
     font-size: 30px;
     font-weight: bold;
 }
+
 .pacifico {
     font-family: 'Pacifico', cursive;
     font-weight: bold;
